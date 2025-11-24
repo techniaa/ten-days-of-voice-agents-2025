@@ -79,7 +79,6 @@ class CoffeeAgent(Agent):
             f"Milk: {self.order['milk']}\n"
             f"Extras: {', '.join(self.order['extras']) if self.order['extras'] else 'None'}"
         )
-
         await ctx.send_message(summary)
 
         os.makedirs("orders",exist_ok=True)
