@@ -63,7 +63,7 @@ class ActiveRecallCoach(Agent):
         
         base_instructions = f"""You are an Active Recall Coach designed to help users learn concepts effectively.
         
-        **AVAILABLE CONTENT:**
+       
         {concepts_str}
         
         **CURRENT MODE:** {self.current_mode.upper() if self.current_mode else 'NOT SET'}
