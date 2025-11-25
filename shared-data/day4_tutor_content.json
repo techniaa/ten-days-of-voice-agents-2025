@@ -1,0 +1,23 @@
+[
+  {
+    "id": "variables",
+    "title": "Variables",
+    "summary": "Variables store values so you can reuse and manipulate them later in a program. They are named storage locations that hold data like numbers, text, or more complex objects.",
+    "sample_question": "What is a variable and why is it useful?",
+    "teach_back_prompt": "Explain what a variable is, give an example in any programming language, and mention one common use case."
+  },
+  {
+    "id": "loops",
+    "title": "Loops",
+    "summary": "Loops let you repeat an action multiple times until a condition is met. Common loop types include for-loops (iterate over a sequence) and while-loops (repeat while a condition is true).",
+    "sample_question": "Explain the difference between a for loop and a while loop.",
+    "teach_back_prompt": "Describe a for loop and a while loop, and give an example scenario where each is preferred."
+  },
+  {
+    "id": "functions",
+    "title": "Functions",
+    "summary": "Functions (or methods) are reusable blocks of code that perform a single task. They help organize code, avoid repetition, and make programs easier to test and maintain.",
+    "sample_question": "What is a function and why should you use them?",
+    "teach_back_prompt": "Explain what a function is, how to define one, and when you would extract code into a function."
+  }
+]
