@@ -1,0 +1,46 @@
+{
+  "company": "Zerodha",
+  "about": "Zerodha is India’s biggest stock broker offering online trading services in stocks, mutual funds, derivatives, and bonds at low costs via the Kite trading platform.",
+  "features": [
+    "Online trading in stocks, F&O, commodities, currency",
+    "Mutual funds via Coin platform",
+    "Low brokerage & transparent pricing",
+    "User-friendly web & mobile app",
+    "Advanced charts & tools for investors"
+  ],
+  "pricing": {
+    "equity_delivery": "₹0 brokerage",
+    "intraday_equity": "₹20 or 0.03% (whichever lower)",
+    "futures": "₹20 per executed order",
+    "options": "₹20 per executed order",
+    "account_opening": "₹200 online"
+  },
+  "who_is_it_for": [
+    "Retail stock investors",
+    "Day traders",
+    "Options & futures traders",
+    "Mutual fund investors"
+  ],
+  "faq": [
+    {
+      "q": "What does Zerodha do?",
+      "a": "Zerodha is an online discount broker that lets you invest and trade in stocks, mutual funds, and derivatives with low brokerage."
+    },
+    {
+      "q": "Do you have a free plan?",
+      "a": "Yes! Equity delivery trades have zero brokerage. Mutual fund investments are also free."
+    },
+    {
+      "q": "Is Zerodha safe?",
+      "a": "Yes, Zerodha is one of India’s most trusted brokers and is SEBI registered."
+    },
+    {
+      "q": "What is the brokerage?",
+      "a": "₹0 for equity delivery. For intraday, futures & options, it's ₹20 per executed order or 0.03% whichever is lower."
+    },
+    {
+      "q": "How do I open an account?",
+      "a": "You can open a trading and Demat account online through the Zerodha app or website. KYC is required."
+    }
+  ]
+}
