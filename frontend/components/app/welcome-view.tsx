@@ -1,118 +1,61 @@
-// components/WelcomeView.tsx (Zerodha Version)
-import { useEffect, useState } from 'react';
-import {
-  ArrowRight,
-  LineChart,
-  TrendingUp,
-  ShieldCheck,
-  PhoneCall,
-  Wallet,
-} from 'lucide-react';
 import { Button } from '@/components/livekit/button';
 
+function WelcomeImage() {
+  return (
+    <svg
+      width="64"
+      height="64"
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-fg0 mb-4 size-16"
+    >
+      <path
+        d="M15 24V40C15 40.7957 14.6839 41.5587 14.1213 42.1213C13.5587 42.6839 12.7956 43 12 43C11.2044 43 10.4413 42.6839 9.87868 42.1213C9.31607 41.5587 9 40.7957 9 40V24C9 23.2044 9.31607 22.4413 9.87868 21.8787C10.4413 21.3161 11.2044 21 12 21C12.7956 21 13.5587 21.3161 14.1213 21.8787C14.6839 22.4413 15 23.2044 15 24ZM22 5C21.2044 5 20.4413 5.31607 19.8787 5.87868C19.3161 6.44129 19 7.20435 19 8V56C19 56.7957 19.3161 57.5587 19.8787 58.1213C20.4413 58.6839 21.2044 59 22 59C22.7956 59 23.5587 58.6839 24.1213 58.1213C24.6839 57.5587 25 56.7957 25 56V8C25 7.20435 24.6839 6.44129 24.1213 5.87868C23.5587 5.31607 22.7956 5 22 5ZM32 13C31.2044 13 30.4413 13.3161 29.8787 13.8787C29.3161 14.4413 29 15.2044 29 16V48C29 48.7957 29.3161 49.5587 29.8787 50.1213C30.4413 50.6839 31.2044 51 32 51C32.7956 51 33.5587 50.6839 34.1213 50.1213C34.6839 49.5587 35 48.7957 35 48V16C35 15.2044 34.6839 14.4413 34.1213 13.8787C33.5587 13.3161 32.7956 13 32 13ZM42 21C41.2043 21 40.4413 21.3161 39.8787 21.8787C39.3161 22.4413 39 23.2044 39 24V40C39 40.7957 39.3161 41.5587 39.8787 42.1213C40.4413 42.6839 41.2043 43 42 43C42.7957 43 43.5587 42.6839 44.1213 42.1213C44.6839 41.5587 45 40.7957 45 40V24C45 23.2044 44.6839 22.4413 44.1213 21.8787C43.5587 21.3161 42.7957 21 42 21ZM52 17C51.2043 17 50.4413 17.3161 49.8787 17.8787C49.3161 18.4413 49 19.2044 49 20V44C49 44.7957 49.3161 45.5587 49.8787 46.1213C50.4413 46.6839 51.2043 47 52 47C52.7957 47 53.5587 46.6839 54.1213 46.1213C54.6839 45.5587 55 44.7957 55 44V20C55 19.2044 54.6839 18.4413 54.1213 17.8787C53.5587 17.3161 52.7957 17 52 17Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 interface WelcomeViewProps {
-  startButtonText?: string;
+  startButtonText: string;
   onStartCall: () => void;
 }
 
 export const WelcomeView = ({
-  startButtonText = 'Talk to a Zerodha Expert',
+  startButtonText,
   onStartCall,
-}: WelcomeViewProps) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
+  ref,
+}: React.ComponentProps<'div'> & WelcomeViewProps) => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white text-slate-900">
-      
-      {/* Subtle Fintech Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-50" />
+    <div ref={ref}>
+      <section className="bg-background flex flex-col items-center justify-center text-center">
+        <WelcomeImage />
 
-      {/* Floating stock icons */}
-      <div className="pointer-events-none absolute inset-0">
-        {[LineChart, TrendingUp, Wallet].map((Icon, i) => (
-          <div
-            key={i}
-            className="animate-float absolute opacity-20 text-blue-500"
-            style={{
-              top: `${15 + i * 20}%`,
-              left: i % 2 ? '75%' : '10%',
-            }}
+        <p className="text-foreground max-w-prose pt-1 leading-6 font-medium">
+          Chat live with your voice AI agent
+        </p>
+
+        <Button variant="primary" size="lg" onClick={onStartCall} className="mt-6 w-64 font-mono">
+          {startButtonText}
+        </Button>
+      </section>
+
+      <div className="fixed bottom-5 left-0 flex w-full items-center justify-center">
+        <p className="text-muted-foreground max-w-prose pt-1 text-xs leading-5 font-normal text-pretty md:text-sm">
+          Need help getting set up? Check out the{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.livekit.io/agents/start/voice-ai/"
+            className="underline"
           >
-            <Icon className="h-20 w-20" />
-          </div>
-        ))}
+            Voice AI quickstart
+          </a>
+          .
+        </p>
       </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 py-12">
-        <div
-          className={`max-w-4xl text-center transition-all duration-1000 ${
-            mounted ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-          }`}
-        >
-          {/* Zerodha Style Logo */}
-          <div className="mb-10">
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <LineChart className="h-16 w-16 text-blue-600" strokeWidth={2.5} />
-            </div>
-          </div>
-
-          {/* Hero Title */}
-          <h1 className="mb-5 text-5xl font-extrabold tracking-tight text-slate-900">
-            Invest Smart with India’s #1 Broker
-          </h1>
-
-          <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-slate-600">
-            1.5+ crore investors trust Zerodha  
-            <span className="font-semibold text-blue-600"> • Zero brokerage on equity delivery</span>
-          </p>
-
-          {/* Benefits */}
-          <div className="mb-12 grid grid-cols-2 gap-6 md:grid-cols-4">
-            {[
-              { icon: TrendingUp, label: '₹0 Equity Delivery' },
-              { icon: ShieldCheck, label: 'Highest Safety' },
-              { icon: Wallet, label: 'Lowest Charges' },
-              { icon: PhoneCall, label: 'Expert Assistance' },
-            ].map(({ icon: Icon, label }) => (
-              <div
-                key={label}
-                className="flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:scale-105"
-              >
-                <Icon className="h-8 w-8 text-blue-600" />
-                <span className="text-sm font-semibold">{label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <Button
-            onClick={onStartCall}
-            className="rounded-full bg-blue-600 px-14 py-6 text-xl font-semibold text-white transition hover:bg-blue-700"
-          >
-            {startButtonText}
-            <ArrowRight className="ml-3 h-6 w-6" />
-          </Button>
-
-          {/* Subtext */}
-          <p className="mt-5 text-sm text-slate-500">
-            Quick consultation • Safe & regulated investments
-          </p>
-        </div>
-      </div>
-
-      {/* Float Animation */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-12px); }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };
