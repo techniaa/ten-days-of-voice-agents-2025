@@ -1,0 +1,146 @@
+[
+    {
+        "id": "prod_001",
+        "name": "Organic Bananas",
+        "category": "Produce",
+        "price": 0.69,
+        "unit": "lb",
+        "tags": [
+            "organic",
+            "fruit",
+            "healthy"
+        ]
+    },
+    {
+        "id": "prod_002",
+        "name": "Red Apples",
+        "category": "Produce",
+        "price": 1.29,
+        "unit": "lb",
+        "tags": [
+            "fruit",
+            "healthy"
+        ]
+    },
+    {
+        "id": "bak_001",
+        "name": "Whole Wheat Bread",
+        "category": "Bakery",
+        "price": 3.49,
+        "unit": "loaf",
+        "tags": [
+            "vegan",
+            "grains"
+        ]
+    },
+    {
+        "id": "bak_002",
+        "name": "Bagels (6-pack)",
+        "category": "Bakery",
+        "price": 4.99,
+        "unit": "pack",
+        "tags": [
+            "grains",
+            "breakfast"
+        ]
+    },
+    {
+        "id": "dair_001",
+        "name": "Whole Milk",
+        "category": "Dairy",
+        "price": 3.99,
+        "unit": "gallon",
+        "tags": [
+            "dairy",
+            "beverage"
+        ]
+    },
+    {
+        "id": "dair_002",
+        "name": "Cheddar Cheese",
+        "category": "Dairy",
+        "price": 5.49,
+        "unit": "block",
+        "tags": [
+            "dairy",
+            "cheese"
+        ]
+    },
+    {
+        "id": "dair_003",
+        "name": "Large Eggs",
+        "category": "Dairy",
+        "price": 4.29,
+        "unit": "dozen",
+        "tags": [
+            "dairy",
+            "protein"
+        ]
+    },
+    {
+        "id": "pant_001",
+        "name": "Peanut Butter",
+        "category": "Pantry",
+        "price": 4.50,
+        "unit": "jar",
+        "tags": [
+            "protein",
+            "spread"
+        ]
+    },
+    {
+        "id": "pant_002",
+        "name": "Strawberry Jam",
+        "category": "Pantry",
+        "price": 3.75,
+        "unit": "jar",
+        "tags": [
+            "spread",
+            "sweet"
+        ]
+    },
+    {
+        "id": "pant_003",
+        "name": "Spaghetti Pasta",
+        "category": "Pantry",
+        "price": 1.99,
+        "unit": "box",
+        "tags": [
+            "grains",
+            "dinner"
+        ]
+    },
+    {
+        "id": "pant_004",
+        "name": "Marinara Sauce",
+        "category": "Pantry",
+        "price": 2.99,
+        "unit": "jar",
+        "tags": [
+            "sauce",
+            "dinner"
+        ]
+    },
+    {
+        "id": "snk_001",
+        "name": "Potato Chips",
+        "category": "Snacks",
+        "price": 3.99,
+        "unit": "bag",
+        "tags": [
+            "salty",
+            "snack"
+        ]
+    },
+    {
+        "id": "snk_002",
+        "name": "Chocolate Bar",
+        "category": "Snacks",
+        "price": 1.50,
+        "unit": "bar",
+        "tags": [
+            "sweet",
+            "snack"
+        ]
+    }
+]
